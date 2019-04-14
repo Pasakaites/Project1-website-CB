@@ -1,7 +1,11 @@
 function mobileMenu() {
-    document.getElementsByClassName('ul-container')[0].style.display = 'block';
-}
-//if none > block, else > none;
+    var x = document.getElementsByClassName('ul-container')[0];
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
 // ADVANCED INDIA - START
 
