@@ -21,12 +21,11 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    /* position: relative; */
 }
 
 .logo-container {
     display: inline-block;
-    /*content: url(../images/logo2.png);*/
     object-fit: contain;
 }
 
