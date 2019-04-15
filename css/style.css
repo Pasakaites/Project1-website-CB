@@ -21,12 +21,11 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    /* position: relative; */
 }
 
 .logo-container {
     display: inline-block;
-    /*content: url(../images/logo2.png);*/
     object-fit: contain;
 }
 
@@ -201,6 +200,7 @@ body {
     border-radius: 50%;
     background-color: rgba(255,255,255,0.3);
     border: 3px solid transparent;
+    margin-right: 6px;
 }
 
 .dot:hover {
@@ -581,6 +581,13 @@ body {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .hero-text h1 {
+        font-size: 40px;
+        margin: 0px 0px 20px 0px;
+    }
+}
+
 @media screen and (max-width: 420px) {
     .hero-text h1 {
         font-size: 35px;
@@ -593,8 +600,36 @@ body {
         font-size: 30px;
         margin: 0px 0px 20px 0px;
     }
+    .menu-mobile-button {
+        background-color: white;
+        border: blue;
+        color: blue;
+        width: 90px;
+        height: 25px;
+        text-align: center;
+        font-size: 13px;
+        border-radius: 3px;
+    }
 }
 
+@media screen and (max-width: 350px) {
+    .h2-text-s {
+        font-size: 15px;
+        font-weight: 100;
+        display: block;
+    }
+    .menu-mobile-button {
+        background-color: white;
+        border: blue;
+        color: blue;
+        width: 70px;
+        height: 25px;
+        text-align: center;
+        font-size: 13px;
+        border-radius: 3px;
+    }
+
+}
 
 
 
