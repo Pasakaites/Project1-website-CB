@@ -175,7 +175,7 @@ body {
     margin-top: 8vh;
 }
 
-.cta-button {
+.cta-button > input {
     background-color: #ff5869;
     border: none;
     color: white;
