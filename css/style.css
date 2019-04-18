@@ -1,27 +1,29 @@
 body {
-    height: 100vh;
-    width: 100vw;
+    height: calc(100vh - (100vh - 100%));
+    width: calc(100vw - (100vw - 100%));
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-	background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 56%, rgba(202, 29, 44, 1) 44% 100%);
-    background-position-x: 75%;
+    background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
+    background-position-x: 95%;
     background-position-y: center;
-    background-size: 100% auto, contain;
+    background-size: 85% auto, contain;
     background-repeat: no-repeat;
 }
 
 .main-container {
-    margin: 0 auto;
-    padding: 34px 24px 40px 144px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .head {
-    width: 100%;
+    width: 80%;
+    height: 40px;
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
-    /* position: relative; */
+    padding-top: 3vh;
 }
 
 .logo-container {
@@ -96,11 +98,11 @@ body {
 .menu a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 1.7vmin;
 }
 
 .menu a:hover {
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
 }
 
 .menu ul {
@@ -111,40 +113,36 @@ body {
 
 .menu li {
     display: inline-block;
-    padding: 20px 13px 13px 13px;
+    padding: 0px 8px 0px 8px;
 }
 
 .active {
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
 }
 
 .buttons-container {
-    display: inline-block;
-    vertical-align: super;
-    padding-right: 160px;
+    padding-top: 15.5px;
 }
 
 .signin-button {
     background-color: transparent;
     border: none;
     color: white;
-    width: 90px;
-    height: 45px;
+    min-width: 6.5vw;
+    height: 4vh;
     text-align: center;
-    font-size: 20px;
-    margin-top: 8px;
+    font-size: 1.7vmin;
 }
 
 .signup-button {
     background-color: white;
     border: none;
     color: blue;
-    width: 130px;
-    height: 45px;
+    min-width: 10vw;
+    height: 4vh;
     text-align: center;
-    font-size: 20px;
-    border-radius: 5px;
-    margin-top: 8px;
+    font-size: 1.7vmin;
+    border-radius: 3px;
 }
 
 .signin-button:hover {
@@ -155,117 +153,81 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+.slide {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .hero-text {
-    padding-top: 40px;
+    padding-top: 3vh;
 }
 
 .hero-text h1 {
-    font-size: 80px;
+    font-size: 8vmin;
 }
 
-.h2-text-b {
-    font-size: 25px;
-    font-weight: 100;
-}
-
-.h2-text-s {
-    font-size: 10px;
-    display: none;
+.hero-text p {
+    font-size: 2.5vmin;
 }
 
 .cta-button-container {
-    padding-top: 80px;
-    margin-top: 30px;
+    padding-top: 3vh;
+    margin-top: 8vh;
 }
 
 .cta-button {
     background-color: #ff5869;
     border: none;
     color: white;
-    width: 200px;
-    height: 70px;
+    width: 22vmin;
+    height: 7vmin;
     text-align: center;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 1.8vmin;
+    border-radius: 3px;
 }
 
+.cta-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
 .dotwrap {
-    padding-top: 40px;
-    margin-top: 160px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 3vh;
+    margin-top: 10vh;
 }
 
 .dot {
-    width: 17px;
-    height: 17px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.3);
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     margin-right: 6px;
 }
 
 .dot:hover {
-    width: 17px;
-    height: 17px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.3);
-    border: 3px solid rgb(255, 184, 0);
+    border: 2px solid rgb(255, 184, 0);
 }
 
 #selected {
-    width: 17px;
-    height: 17px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.3);
-    border: 3px solid rgb(255, 184, 0);
+    border: 2px solid rgb(255, 184, 0);
 }
 
-@media screen and (max-width: 1380px) {
+/* @media screen and (max-width: 1380px) {
     .main-container {
         margin: 0 auto;
         padding: 20px 24px 10px 80px;
     }
 }
-
-@media screen and (max-height: 1049px) {
-    .main-container {
-        margin: 0 auto;
-        padding: 20px 24px 10px 80px;
-    }
-}
-
-@media screen and (max-height: 1048px) {
-    .cta-button-container {
-        padding-top: 80px;
-        margin-top: 0px;
-    }
-    .dotwrap {
-        padding-top: 40px;
-        margin-top: 60px;
-    }
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
-        background-position-x: 75%;
-        background-position-y: center;
-        background-size: 80% auto, contain;
-        background-repeat: no-repeat;
-    }
-}
-
-/* @media screen and (max-height: 954px) {
-    .h2-text-b {
-        font-size: 20px;
-        font-weight: 100;
-    }
-    .hero-text h1 {
-        font-size: 70px;
-    }
-} */
 
 @media screen and (max-width: 1278px) {
     .h2-text-b {
@@ -274,30 +236,6 @@ body {
     }
     .hero-text h1 {
         font-size: 70px;
-    }
-}
-
-@media screen and (max-height: 840px) {
-    .cta-button-container {
-        padding-top: 40px;
-        margin-top: 0px;
-    }
-    .dotwrap {
-        padding-top: 0px;
-        margin-top: 60px;
-    }
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
-        background-position-x: 75%;
-        background-position-y: center;
-        background-size: 75% auto, contain;
-        background-repeat: no-repeat;
     }
 }
 
@@ -336,193 +274,21 @@ body {
     }
 }
 
-@media screen and (max-height: 780px) {
-    .hero-text h1 {
-        font-size: 80px;
-        margin-top: 20px;
-}
-    .cta-button-container {
-        padding-top: 10px;
-        margin-top: 0px;
-    }
-    .dotwrap {
-        padding-top: 60px;
-        margin-top: 30px;
-    }
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
-        background-position-x: 75%;
-        background-position-y: center;
-        background-size: 70% auto, contain;
-        background-repeat: no-repeat;
-    }
-    /* .cta-button {
-        background-color: #ff5869;
-        border: none;
-        color: white;
-        width: 160px;
-        height: 40px;
-        text-align: center;
-        font-size: 14px;
-        border-radius: 5px;
-    } */
-    /* .signin-button {
-        background-color: transparent;
-        border: none;
-        color: white;
-        width: 75px;
-        height: 35px;
-        text-align: center;
-        font-size: 16px;
-        margin-top: 8px;
-    }
-    
-    .signup-button {
-        background-color: white;
-        border: none;
-        color: blue;
-        width: 100px;
-        height: 35px;
-        text-align: center;
-        font-size: 16px;
-        border-radius: 5px;
-        margin-top: 8px;
-    } */
-}
-@media screen and (max-height: 736px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
-        background-position-x: 75%;
-        background-position-y: center;
-        background-size: 65% auto, contain;
-        background-repeat: no-repeat;
-    }
-    /* .hero-text h1 {
-        font-size: 60px;
-    }
-    .h2-text-b {
-        display: none;
-    }
-    .h2-text-s {
-        font-size: 20px;
-        font-weight: 100;
-        display: block;
-    } */
-}
-
-@media screen and (max-height: 720px) {
-    .hero-text h1 {
-        font-size: 70px;
-        margin-top: 10px;
-    }
-
-}
-
-@media screen and (max-height: 680px) {
-    .h2-text-b {
-        font-size: 22px;
-        font-weight: 100;
-    }
-    .hero-text h1 {
-        font-size: 70px;
-        margin-top: 10px;
-        margin-bottom: 40px;
-    }
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
-        background-position-x: 75%;
-        background-position-y: center;
-        background-size: 60% auto, contain;
-        background-repeat: no-repeat;
-    }
-
-}
-
-@media screen and (max-height: 680px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
-        background-position-x: 75%;
-        background-position-y: center;
-        background-size: 55% auto, contain;
-        background-repeat: no-repeat;
-    }
-    .dotwrap {
-        padding-top: 40px;
-        margin-top: 10px;
+@media screen and (max-width: 1036px) {
+    .buttons-container {
+        display: inline-block;
+        vertical-align: super;
+        padding-right: 0px;
     }
 }
 
-@media screen and (max-height: 600px) {
-    .cta-button {
-        background-color: #ff5869;
-        border: none;
-        color: white;
-        width: 160px;
-        height: 40px;
-        text-align: center;
-        font-size: 14px;
-        border-radius: 5px;
-    }
-}
-
-@media screen and (max-height: 570px) {
-    .hero-text h1 {
-        font-size: 65px;
-        margin-top: 0px;
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (max-height: 534px) {
+@media screen and (max-width: 990px) {
     .hero-text h1 {
         font-size: 60px;
-        margin-top: 0px;
-        margin-bottom: 30px;
-    }
-    .h2-text-b {
-        font-size: 20px;
-        font-weight: 100;
-    }
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
-        background-position-x: 75%;
-        background-position-y: center;
-        background-size: 50% auto, contain;
-        background-repeat: no-repeat;
     }
 }
 
-@media screen and (max-width: 1074px) {
+@media screen and (max-width: 980px) {
     .menu {
         display: none;
     }
@@ -535,12 +301,6 @@ body {
     }
     .buttons-container {
         display: none;
-    }
-}
-
-@media screen and (max-width: 990px) {
-    .hero-text h1 {
-        font-size: 60px;
     }
 }
 
@@ -590,13 +350,6 @@ body {
 
 @media screen and (max-width: 420px) {
     .hero-text h1 {
-        font-size: 35px;
-        margin: 0px 0px 20px 0px;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .hero-text h1 {
         font-size: 30px;
         margin: 0px 0px 20px 0px;
     }
@@ -631,5 +384,185 @@ body {
 
 }
 
+
+
+@media screen and (max-height: 1048px) {
+    .main-container {
+        margin: 0 auto;
+        padding: 20px 24px 10px 80px;
+    }
+    .cta-button-container {
+        padding-top: 80px;
+        margin-top: 0px;
+    }
+    .dotwrap {
+        padding-top: 40px;
+        margin-top: 60px;
+    }
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
+        background-position-x: 75%;
+        background-position-y: center;
+        background-size: 80% auto, contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-height: 840px) {
+    .cta-button-container {
+        padding-top: 40px;
+        margin-top: 0px;
+    }
+    .dotwrap {
+        padding-top: 0px;
+        margin-top: 60px;
+    }
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
+        background-position-x: 75%;
+        background-position-y: center;
+        background-size: 75% auto, contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-height: 780px) {
+    .hero-text h1 {
+        font-size: 80px;
+        margin-top: 20px;
+}
+    .cta-button-container {
+        padding-top: 10px;
+        margin-top: 0px;
+    }
+    .dotwrap {
+        padding-top: 60px;
+        margin-top: 30px;
+    }
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
+        background-position-x: 75%;
+        background-position-y: center;
+        background-size: 70% auto, contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-height: 736px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
+        background-position-x: 75%;
+        background-position-y: center;
+        background-size: 65% auto, contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-height: 720px) {
+    .hero-text h1 {
+        font-size: 70px;
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-height: 680px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
+        background-position-x: 75%;
+        background-position-y: center;
+        background-size: 55% auto, contain;
+        background-repeat: no-repeat;
+    }
+    .dotwrap {
+        padding-top: 40px;
+        margin-top: 10px;
+    }
+    .h2-text-b {
+        font-size: 22px;
+        font-weight: 100;
+    }
+    .hero-text h1 {
+        font-size: 70px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .cta-button {
+        background-color: #ff5869;
+        border: none;
+        color: white;
+        width: 160px;
+        height: 40px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-height: 570px) {
+    .hero-text h1 {
+        font-size: 65px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-height: 534px) {
+    .hero-text h1 {
+        font-size: 60px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    .h2-text-b {
+        font-size: 20px;
+        font-weight: 100;
+    }
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 60%, rgba(202, 29, 44, 1) 40% 100%);
+        background-position-x: 75%;
+        background-position-y: center;
+        background-size: 50% auto, contain;
+        background-repeat: no-repeat;
+    }
+} */
 
 

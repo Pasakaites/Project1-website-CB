@@ -9,7 +9,7 @@ function mobileMenu() {
 
 function getDom() {
     document.body.appendChild(getContainer());
-    //createStyleSheet();
+    createStyleRules();
 }
 
 function getContainer() {
@@ -24,7 +24,6 @@ function getContainer() {
 function getHead() {
     let section = document.createElement('section');
     section.className = 'head';
-    document.getElementById('container').appendChild(section);
     section.appendChild(getFlexLeft());
     section.appendChild(getFlexRight());
     return section;
@@ -33,7 +32,6 @@ function getHead() {
 function getFlexLeft() {
     let div = document.createElement('div');
     div.className = 'flex-left';
-    document.getElementsByClassName('head')[0].appendChild(div);
     div.appendChild(getLogo());
     div.appendChild(getMenu());
     return div;
@@ -48,30 +46,6 @@ function getLogo() {
     div.appendChild(img);
     return div;
 }
-
-// function getMenu() {
-//     let nav = document.createElement('nav');
-//     nav.className = 'menu';
-//     nav.id = 'menu-container';
-//     let ul = document.createElement('ul');
-//     ul.id = 'menu';
-//     nav.appendChild(ul);
-//     document.getElementsByClassName('flex-left')[0].appendChild(nav);
-//     getMenuItems('menu');
-
-// }
-// function getMenuItems() {
-//     const menuItems = ['Home', 'Products', 'Templates', 'Pricing'];
-//     for (let i = 0; i < menuItems.length; i++) {
-//         let li = document.createElement('li');
-//         let a = document.createElement('a');
-//         a.href = '#';
-//         a.innerHTML = menuItems[i];
-//         li.appendChild(a);
-//         document.getElementById('menu').appendChild(li); //is seno kodo
-//         // return li;
-//     }
-// }
 
 function getMenu() {
     let nav = document.createElement('nav');
@@ -102,6 +76,7 @@ function getFlexRight() {
     let div = document.createElement('div');
     div.className = 'flex-right';
     div.appendChild(getButtons());
+    div.appendChild(getMenuMobile());
     return div;
 }
 
@@ -133,26 +108,28 @@ function getMenuMobile() {
     let nav = document.createElement('nav');
     nav.className = 'menu-mobile';
     nav.id = 'mobile-menu-container';
-    getMobileButtonContainer();
+    let div = document.createElement('div');
+    div.className = 'ul-container';
     let ul = document.createElement('ul');
     ul.id = 'menu-mobile';
-    nav.appendChild(ul);
-    document.getElementsByClassName('flex-right')[0].appendChild(nav);
-    getMobileMenuItems('menu-mobile');
-
+    nav.appendChild(getMobileButtonContainer());
+    div.appendChild(ul);
+    nav.appendChild(div);
+    const menuItems = ['SIGN IN', 'SIGN UP', 'HOME', 'PRODUCTS', 'TEMPLATES', 'PRICING'];
+    for (let i = 0; i < menuItems.length; i++) {
+        let item = getMobileMenuItems(menuItems, i);
+        ul.appendChild(item);
+    }
+    return nav;
 }
     
-function getMobileMenuItems() {
-    const menuItems = ['Home', 'Products', 'Templates', 'Pricing'];
-    for (let i = 0; i < menuItems.length; i++) {
-        let li = document.createElement('li');
-        let a = document.createElement('a');
-        a.href = '#';
-        a.innerHTML = menuItems[i];
-        li.appendChild(a);
-        document.getElementById('menu-mobile').appendChild(li); //is seno kodo
-        // return li;
-    }
+function getMobileMenuItems(menuItems, index) {
+    let li = document.createElement('li');
+    let a = document.createElement('a');
+    a.href = '#';
+    a.innerHTML = menuItems[index];
+    li.appendChild(a);
+    return li;
 }
 
 function getMobileButtonContainer() {
@@ -173,7 +150,6 @@ function getMobileButton() {
 function getSlide() {
     let section = document.createElement('section');
     section.className = 'slide';
-    document.getElementsByClassName('main-container')[0].appendChild(section);
     section.appendChild(getHeroText());
     section.appendChild(hetH2());
     section.appendChild(getCta());
@@ -233,7 +209,6 @@ function getCtaButton() {
 function getDots() {
     let div = document.createElement('div');
     div.className = 'doststyle';
-    document.getElementsByClassName('main-container')[0].appendChild(div);
     div.appendChild(getDotWrap());
     return div;
 }
@@ -263,16 +238,15 @@ function getDot() {
     return button;
 }
 
-
 function createStyleRules() {
     const style = createStyleSheet();
     document.head.appendChild(style);
     style.sheet.insertRule('body {height: 100vh; width: 100vw; margin: 0; padding: 0; font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; background-image: url(../images/naujas.png), linear-gradient(125deg, rgba(18, 54, 202, 1) 0 56%, rgba(202, 29, 44, 1) 44% 100%); background-position-x: 75%; background-position-y: center; background-size: 100% auto, contain; background-repeat: no-repeat;}');
     applyContainerStyleRules(style.sheet);
     applyHeadStyleRules(style.sheet);
-    applyMobileStyleRules(sheet);
-    applySlideStyleRules(sheet);
-    applyDotStyleRules(sheet);
+    applyMobileStyleRules(style.sheet);
+    applySlideStyleRules(style.sheet);
+    applyDotStyleRules(style.sheet);
 }
 
 function createStyleSheet() {
@@ -287,7 +261,7 @@ function applyContainerStyleRules(sheet) {
 }
 
 function applyHeadStyleRules(sheet) {
-    sheet.insertRule('.head { width: 100%; display: flex; justify-content: space-between; position: relative;}');
+    sheet.insertRule('.head { width: 100%; display: flex; justify-content: space-between;}');
     sheet.insertRule('.logo-container {display: inline-block; object-fit: contain;}');
     sheet.insertRule('.menu {display: inline-block; vertical-align: super;}');
     sheet.insertRule('.menu a {text-decoration: none; color: white; font-size: 20px;}');
@@ -324,7 +298,7 @@ function applySlideStyleRules(sheet) {
 
 function applyDotStyleRules(sheet) {
     sheet.insertRule('.dotwrap {padding-top: 40px; margin-top: 160px;}');
-    sheet.insertRule('.dot {width: 17px; height: 17px; border-radius: 50%; background-color: rgba(255,255,255,0.3); border: 3px solid transparent;}');
+    sheet.insertRule('.dot {width: 17px; height: 17px; border-radius: 50%; background-color: rgba(255,255,255,0.3); border: 3px solid transparent; margin-right: 6px;}');
     sheet.insertRule('.dot:hover {width: 17px; height: 17px; border-radius: 50%; background-color: rgba(255,255,255,0.3); border: 3px solid rgb(255, 184, 0);}');
     sheet.insertRule('#selected {width: 17px; height: 17px; border-radius: 50%; background-color: rgba(255,255,255,0.3); border: 3px solid rgb(255, 184, 0);}');
 }
