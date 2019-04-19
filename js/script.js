@@ -7,6 +7,8 @@ function mobileMenu() {
     }
   }
 
+//HTML reikalai
+
 function getDom() {
     document.body.appendChild(getContainer());
     createStyleRules();
@@ -238,6 +240,8 @@ function getDot() {
     return button;
 }
 
+//CSS reikalai
+
 function createStyleRules() {
     const style = createStyleSheet();
     document.head.appendChild(style);
@@ -302,3 +306,66 @@ function applyDotStyleRules(sheet) {
     sheet.insertRule('.dot:hover {width: 17px; height: 17px; border-radius: 50%; background-color: rgba(255,255,255,0.3); border: 3px solid rgb(255, 184, 0);}');
     sheet.insertRule('#selected {width: 17px; height: 17px; border-radius: 50%; background-color: rgba(255,255,255,0.3); border: 3px solid rgb(255, 184, 0);}');
 }
+
+//JSON reikalai
+
+function loadJSON(callback) {
+    var req = new XMLHttpRequest();
+    req.overrideMimeType('application/json');
+    req.open('GET', 'https://api.myjson.com/bins/ryag0', true);
+    req.onreadystatechange = 
+    function() {
+        if (req.readyState == 4 && req.status == "200") {
+            callback(req.responseText);
+        }
+    };
+    req.send(null);  
+}
+
+function getData(data) { //gauna data is json objekto - KAIP? 
+    let el = document.createElement(data.type);
+    console.log(data.type);
+    if(typeof el.id === 'string'){
+        el.id = data.id;
+    }
+    if(typeof el.className === 'string'){
+        el.className = data.className;
+    }        
+    if(typeof el.src === 'string'){
+        el.src = data.src;
+    }
+    if(typeof el.href === 'string'){
+        el.href = data.href;
+    }
+    if(typeof el.innerHTML === 'string'){
+        el.innerHTML = data.innerHTML;
+    }
+    if(typeof el.alt === 'string'){
+        el.alt = data.alt;
+    }
+    if(typeof el.buttonType === 'string'){
+        el.alt = data.buttonType;
+    }
+    if(typeof el.onclick === 'string'){
+        el.alt = data.onclick;
+    }
+    return el;
+    }
+
+function recurseJSON(data) { //Kaip sitas siejasi su getData?
+    for (let i of data.content) {
+        console.log(getData(i));
+        if (typeof i.content === 'object') {
+            recurseJSON(i);
+        }
+        //document.body.appendChild(get(i));
+    }
+}
+
+function initJSON() { //Kas tas res? Is kur jis?
+    loadJSON(function(res) {
+        recurseJSON(JSON.parse(res));
+    });
+}
+
+//initJSON();
