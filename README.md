@@ -1,1 +1,5 @@
-Puikus multikultūrinio programavimo pavyzdys, apjungiantis geriausias indiško ir lietuviško programavimo mokyklas. 
+Puikus indoeuropietiško programavimo pavyzdys, apjungiantis geriausias indiško ir lietuviško programavimo tradicijas. 
+
+
+
+
