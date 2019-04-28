@@ -1,264 +1,300 @@
 {
-    "type": "div",
-    "className": "main-container",
-    "content": [
-        {
-            "type": "section",
-            "className": "head",
-            "content": [
-                {
-                    "type": "div",
-                    "className": "flex-left",
-                    "content": [
-                        {
-                            "type": "div",
-                            "className": "logo-container",
-                            "content": [
-                                {
-                                    "type": "img",
-                                    "src": "../images/logo2.png",
-                                    "alt": "logo"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "nav",
-                            "className": "menu",
-                            "id": "menu-container",
-                            "content": [
-                                {
-                                    "type": "ul",
-                                    "id": "menu",
-                                    "content": [
-                                        {
-                                            "type": "li",
-                                            "content": [
-                                                {
-                                                    "type": "a",
-                                                    "className": "active",
-                                                    "href": "#",
-                                                    "innerHTML": "HOME"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "li",
-                                            "content": [
-                                                {
-                                                    "type": "a",
-                                                    "href": "#",
-                                                    "innerHTML": "PRODUCTS"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "li",
-                                            "content": [
-                                                {
-                                                    "type": "a",
-                                                    "href": "#",
-                                                    "innerHTML": "TEMPLATES"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "li",
-                                            "content": [
-                                                {
-                                                    "type": "a",
-                                                    "href": "#",
-                                                    "innerHTML": "PRICING"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "div",
-                    "className": "flex-right",
-                    "content": [
-                        {
-                            "type": "div",
-                            "className": "buttons-container",
-                            "content": [
-                                {
-                                    "type": "button",
-                                    "buttonType": "button",
-                                    "className": "signin-button",
-                                    "innerHTML": "SIGN IN"
-                                },
-                                {
-                                    "type": "button",
-                                    "buttonType": "button",
-                                    "className": "signup-button",
-                                    "innerHTML": "SIGN UP"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "nav",
-                            "className": "menu-mobile",
-                            "id": "mobile-menu-container",
-                            "content": [
-                                {
-                                    "type": "div",
-                                    "className": "menu-mobile-button-container",
-                                    "content": [
-                                        {
-                                            "type": "button",
-                                            "buttonType": "button",
-                                            "className": "menu-mobile-button",
-                                            "onclick": "mobileMenu()",
-                                            "innerHTML": "MENU"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "div",
-                                    "className": "ul-container",
-                                    "content": [
-                                        {
-                                            "type": "ul",
-                                            "id": "menu-mobile",
-                                            "content": [
-                                                {
-                                                    "type": "li",
-                                                    "content": [
-                                                        {
-                                                            "type": "a",
-                                                            "href": "#",
-                                                            "innerHTML": "SIGN IN"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "li",
-                                                    "content": [
-                                                        {
-                                                            "type": "a",
-                                                            "href": "#",
-                                                            "innerHTML": "SIGN UP"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "li",
-                                                    "content": [
-                                                        {
-                                                            "type": "a",
-                                                            "href": "#",
-                                                            "innerHTML": "HOME"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "li",
-                                                    "content": [
-                                                        {
-                                                            "type": "a",
-                                                            "href": "#",
-                                                            "innerHTML": "PRODUCTS"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "li",
-                                                    "content": [
-                                                        {
-                                                            "type": "a",
-                                                            "href": "#",
-                                                            "innerHTML": "TEMPLATES"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "li",
-                                                    "content": [
-                                                        {
-                                                            "type": "a",
-                                                            "href": "#",
-                                                            "innerHTML": "PRICING"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+    "type":"div",
+    "className":"mainContainer",
+    "id":"container",
+    "content":
+    [{
+        "type":"section",
+        "className":"head",
+        "content":
+        [{
+            "type":"div",
+            "className":"flex-left",
+            "content":
+            [{
+                "type":"div",
+                "className":"logo-container",
+                "content":
+                [{
+                    "type":"img",
+                    "src":"../images/logo2.png",
+                    "alt":"logo"
+                }]
+            },
+            {
+                "type":"nav",
+                "className":"menu",
+                "id":"menu-container",
+                "content":
+                [{
+                    "type":"ul",
+                    "id":"menu",
+                    "content":
+                    [{
+                        "type":"li",
+                        "content":
+                        [{
+                            "type":"a",
+                            "className":"home",
+                            "id": "active",
+                            "onclick":"klik",
+                            "href":"#",
+                            "innerHTML":"HOME"
+                        }]
+                    },
+                    {
+                        "type":"li",
+                        "content":
+                        [{
+                            "type":"a",
+                            "className":"products",
+                            "onclick":"klik",
+                            "href":"#",
+                            "innerHTML":"PRODUCTS"
+                        }]
+                    },
+                    {
+                        "type":"li",
+                        "content":
+                        [{
+                            "type":"a",
+                            "className":"templates",
+                            "onclick":"klik",
+                            "href":"#",
+                            "innerHTML":"TEMPLATES"
+                        }]
+                    },
+                    {
+                        "type":"li",
+                        "content":
+                        [{
+                            "type":"a",
+                            "className":"pricing",
+                            "onclick":"klik",
+                            "href":"#",
+                            "innerHTML":"PRICING"
+                        }]
+                    }]
+                }]
+            }]
         },
         {
-            "type": "section",
-            "className": "slide",
-            "content": [
-                {
-                    "type": "div",
-                    "className": "hero-text",
-                    "content": [
-                        {
-                            "type": "h1",
-                            "innerHTML": "Create Stunning<br>Visual Media"
-                        },
-                        {
-                            "type": "p",
-                            "innerHTML": "Super simple tool to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
-                        }
-                    ]
+            "type":"div",
+            "className":"flex-right",
+            "content":
+            [{
+                "type":"div",
+                "className":"buttons-container",
+                "content":
+                [{
+                    "type":"button",
+                    "buttonType":"button",
+                    "className":"signin-button",
+                    "innerHTML":"SIGN IN"
                 },
                 {
-                    "type": "div",
-                    "className": "cta-button-container",
-                    "content": [
+                    "type":"button",
+                    "buttonType":"button",
+                    "className":"signup-button",
+                    "innerHTML":"SIGN UP"
+                }]
+            },
+            {
+                "type":"nav",
+                "className":"menu-mobile",
+                "id":"mobile-menu-container",
+                "content":
+                [{
+                    "type":"div",
+                    "className":"menu-mobile-button-container",
+                    "content":
+                    [{
+                        "type":"button",
+                        "buttonType":"button",
+                        "className":"menu-mobile-button",
+                        "onclick":"klik",
+                        "innerHTML":"MENU"
+                    }]
+                },
+                {
+                    "type":"div",
+                    "className":"ul-container",
+                    "content":
+                    [{
+                        "type":"ul",
+                        "id":"menu-mobile",
+                        "content":
+                        [{
+                            "type":"li",
+                            "content":
+                            [{
+                                "type":"a",
+                                "href":"#",
+                                "innerHTML":"SIGN IN"
+                            }]
+                        },
                         {
-                            "type": "button",
-                            "buttonType": "button",
-                            "className": "cta-button",
-                            "innerHTML": "CREATE DESIGN &#8594"
-                        }
-                    ]
-                }
-            ]
+                            "type":"li",
+                            "content":
+                            [{
+                                "type":"a",
+                                "href":"#",
+                                "innerHTML":"SIGN UP"
+                            }]
+                        },
+                        {
+                            "type":"li",
+                            "content":
+                            [{
+                                "type":"a",
+                                "className":"home",
+                                "id":"homeId",
+                                "onclick":"klik",
+                                "href":"#",
+                                "innerHTML":"HOME"
+                            }]
+                        },
+                        {
+                            "type":"li",
+                            "content":
+                            [{
+                                "type":"a",
+                                "className":"products",
+                                "id":"productsId",
+                                "onclick":"klik",
+                                "href":"#",
+                                "innerHTML":"PRODUCTS"
+                            }]
+                        },
+                        {
+                            "type":"li",
+                            "content":
+                            [{
+                                "type":"a",
+                                "className":"templates",
+                                "id":"templatesId",
+                                "onclick":"klik",
+                                "href":"#",
+                                "innerHTML":"TEMPLATES"
+                            }]
+                        },
+                        {
+                            "type":"li",
+                            "content":
+                            [{
+                                "type":"a",
+                                "className":"pricing",
+                                "id":"pricingId",
+                                "onclick":"klik",
+                                "href":"#",
+                                "innerHTML":"PRICING"
+                            }]
+                        }]
+                    }]
+                }]
+            }]
+        }]
+    },
+    {
+        "type":"section",
+        "className":"slide",
+        "content":
+        [{
+            "type":"div",
+            "className":"hero-text1",
+            "content":
+            [{
+                "type": "h1",
+                "innerHTML": "Create Stunning<br>Visual Media"
+            },
+            {
+                "type": "p",
+                "innerHTML": "Super simple tool to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
+            }]
         },
         {
-            "type": "div",
-            "className": "doststyle",
-            "content": [
-                {
-                    "type": "div",
-                    "className": "dotwrap",
-                    "content": [
-                        {
-                            "type": "button",
-                            "buttonType": "button",
-                            "className": "dot",
-                            "id": "selected"
-                        },
-                        {
-                            "type": "button",
-                            "buttonType": "button",
-                            "className": "dot"
-                        },
-                        {
-                            "type": "button",
-                            "buttonType": "button",
-                            "className": "dot"
-                        },
-                        {
-                            "type": "button",
-                            "buttonType": "button",
-                            "className": "dot"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+            "type":"div",
+            "className":"hero-text2",
+            "content":
+            [{
+                "type": "h1",
+                "innerHTML": "Create Beautiful<br>Visual Media"
+            },
+            {
+                "type": "p",
+                "innerHTML": "Super slick tool to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
+            }]
+        },
+        {
+            "type":"div",
+            "className":"hero-text3",
+            "content":
+            [{
+                "type": "h1",
+                "innerHTML": "Create Best<br>Visual Media"
+            },
+            {
+                "type": "p",
+                "innerHTML": "The best tool to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
+            }]
+        },
+        {
+            "type":"div",
+            "className":"hero-text4",
+            "content":
+            [{
+                "type": "h1",
+                "innerHTML": "Create Fantastic<br>Visual Media"
+            },
+            {
+                "type": "p",
+                "innerHTML": "Super bestest tool to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
+            }]
+        },
+        {
+            "type":"div",
+            "className":"cta-button-container",
+            "content":
+            [{
+                "type":"button",
+                "buttonType":"button",
+                "className":"cta-button",
+                "innerHTML":"CREATE DESIGN &#8594"
+            }]
+        }]
+    },
+    {
+        "type":"div",
+        "className":"doststyle",
+        "content":
+        [{
+            "type":"div",
+            "className":"dotwrap",
+            "content":
+            [{
+                "type": "span",
+                "onclick":"klik",
+                "className": "dot selected",
+                "id": "dot1"
+            },
+            {
+                "type": "span",
+                "onclick":"klik",
+                "className": "dot",
+                "id": "dot2"
+            },
+            {
+                "type": "span",
+                "onclick":"klik",
+                "className": "dot",
+                "id": "dot3"
+            },
+            {
+                "type": "span",
+                "onclick":"klik",
+                "className": "dot",
+                "id": "dot4"
+            }]
+        }]
+    }]
 }
