@@ -14,6 +14,7 @@
             [{
                 "type":"div",
                 "className":"logo-container",
+                "onclick":"klik",
                 "content":
                 [{
                     "type":"img",
@@ -253,12 +254,65 @@
         },
         {
             "type":"div",
+            "className":"hero-text5",
+            "content":
+            [{
+                "type": "h1",
+                "innerHTML": "Our Products<br>The Best"
+            },
+            {
+                "type": "p",
+                "innerHTML": "Variety of products to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
+            }]
+        },
+        {
+            "type":"div",
+            "className":"hero-text6",
+            "content":
+            [{
+                "type": "h1",
+                "innerHTML": "Templates<br>Wunderba"
+            },
+            {
+                "type": "p",
+                "innerHTML": "Templates for everything to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
+            }]
+        },
+        {
+            "type":"div",
+            "className":"hero-text7",
+            "content":
+            [{
+                "type": "h1",
+                "innerHTML": "Best Prices<br>50% OFF!"
+            },
+            {
+                "type": "p",
+                "innerHTML": "Best deal to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
+            }]
+        },
+        {
+            "type":"div",
+            "className":"hero-text8",
+            "content":
+            [{
+                "type": "h1",
+                "innerHTML": "Welcome<br>To Creator"
+            },
+            {
+                "type": "p",
+                "innerHTML": "Easy way to create trendy videos and pictures<br>for your ads, social media, blogs and websites.<br>Make your projects stand out!"
+            }]
+        },
+        {
+            "type":"div",
             "className":"cta-button-container",
             "content":
             [{
                 "type":"button",
                 "buttonType":"button",
                 "className":"cta-button",
+                "onclick":"klik",
                 "innerHTML":"CREATE DESIGN &#8594"
             }]
         }]

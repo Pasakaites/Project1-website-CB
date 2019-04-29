@@ -3,7 +3,7 @@
 function loadJSON(callback) {
     var req = new XMLHttpRequest();
     req.overrideMimeType('application/json');
-    req.open('GET', 'https://api.myjson.com/bins/ezo2c', true);
+    req.open('GET', 'https://api.myjson.com/bins/11khps', true);
     req.onreadystatechange = 
     function() {
         if (req.readyState == 4 && req.status == "200") {
@@ -80,10 +80,10 @@ function catchEventListeners(el) {
             document.getElementById('dot2').style = 'border: 4px solid transparent';
             document.getElementById('dot3').style = 'border: 4px solid transparent';
             document.getElementById('dot4').style = 'border: 4px solid transparent';
-            document.getElementsByClassName('hero-text1')[0].style.color = 'white';
-            document.getElementsByClassName('hero-text2')[0].style.color = 'white';
-            document.getElementsByClassName('hero-text3')[0].style.color = 'white';
-            document.getElementsByClassName('hero-text4')[0].style.color = 'white';
+            document.getElementsByClassName('hero-text1')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text2')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text3')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text4')[0].style.display = 'none';
         })
     }
     if (el.onclick === 'klik' && el.id === 'dot2') {
@@ -92,10 +92,10 @@ function catchEventListeners(el) {
             document.getElementById('dot1').style = 'border: 4px solid transparent';
             document.getElementById('dot3').style = 'border: 4px solid transparent';
             document.getElementById('dot4').style = 'border: 4px solid transparent';
-            document.getElementsByClassName('hero-text1')[0].style.color = 'yellow';
-            document.getElementsByClassName('hero-text2')[0].style.color = 'yellow';
-            document.getElementsByClassName('hero-text3')[0].style.color = 'yellow';
-            document.getElementsByClassName('hero-text4')[0].style.color = 'yellow';
+            document.getElementsByClassName('hero-text1')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text2')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text3')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text4')[0].style.display = 'none';
         })
     }
     if (el.onclick === 'klik' && el.id === 'dot3') {
@@ -104,10 +104,10 @@ function catchEventListeners(el) {
             document.getElementById('dot1').style = 'border: 4px solid transparent';
             document.getElementById('dot2').style = 'border: 4px solid transparent';
             document.getElementById('dot4').style = 'border: 4px solid transparent';
-            document.getElementsByClassName('hero-text1')[0].style.color = 'green';
-            document.getElementsByClassName('hero-text2')[0].style.color = 'green';
-            document.getElementsByClassName('hero-text3')[0].style.color = 'green';
-            document.getElementsByClassName('hero-text4')[0].style.color = 'green';
+            document.getElementsByClassName('hero-text1')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text2')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text3')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text4')[0].style.display = 'none';
         })
     }
     if (el.onclick === 'klik' && el.id === 'dot4') {
@@ -116,10 +116,10 @@ function catchEventListeners(el) {
             document.getElementById('dot1').style = 'border: 4px solid transparent';
             document.getElementById('dot2').style = 'border: 4px solid transparent';
             document.getElementById('dot3').style = 'border: 4px solid transparent';
-            document.getElementsByClassName('hero-text1')[0].style.color = 'red';
-            document.getElementsByClassName('hero-text2')[0].style.color = 'red';
-            document.getElementsByClassName('hero-text3')[0].style.color = 'red';
-            document.getElementsByClassName('hero-text4')[0].style.color = 'red';
+            document.getElementsByClassName('hero-text1')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text2')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text3')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text4')[0].style.display = 'block';
         })
     }
     if (el.onclick === 'klik' && el.className === 'home') {
@@ -128,34 +128,53 @@ function catchEventListeners(el) {
             document.getElementsByClassName('hero-text2')[0].style.display = 'none';
             document.getElementsByClassName('hero-text3')[0].style.display = 'none';
             document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
             document.getElementsByClassName('home')[0].style = 'border-bottom: 2px solid white';
             document.getElementsByClassName('products')[0].style = 'border-bottom: none';
             document.getElementsByClassName('templates')[0].style = 'border-bottom: none';
             document.getElementsByClassName('pricing')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'block';
+            document.getElementById('dot1').style = 'border: 4px solid rgb(255, 184, 0)';
+            document.getElementById('dot2').style = 'border: 4px solid transparent';
+            document.getElementById('dot3').style = 'border: 4px solid transparent';
+            document.getElementById('dot4').style = 'border: 4px solid transparent';
         })
     }
     if (el.onclick === 'klik' && el.className === 'products') {
         document.getElementsByClassName('products')[0].addEventListener('click', function() {
             document.getElementsByClassName('hero-text1')[0].style.display = 'none';
-            document.getElementsByClassName('hero-text2')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text2')[0].style.display = 'none';
             document.getElementsByClassName('hero-text3')[0].style.display = 'none';
             document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
             document.getElementsByClassName('home')[0].style = 'border-bottom: none';
             document.getElementsByClassName('products')[0].style = 'border-bottom: 2px solid white';
             document.getElementsByClassName('templates')[0].style = 'border-bottom: none';
             document.getElementsByClassName('pricing')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'none';
         })
     }
     if (el.onclick === 'klik' && el.className === 'templates') {
         document.getElementsByClassName('templates')[0].addEventListener('click', function() {
             document.getElementsByClassName('hero-text1')[0].style.display = 'none';
             document.getElementsByClassName('hero-text2')[0].style.display = 'none';
-            document.getElementsByClassName('hero-text3')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text3')[0].style.display = 'none';
             document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
             document.getElementsByClassName('home')[0].style = 'border-bottom: none';
             document.getElementsByClassName('products')[0].style = 'border-bottom: none';
             document.getElementsByClassName('templates')[0].style = 'border-bottom: 2px solid white';
             document.getElementsByClassName('pricing')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'none';
         })
     }
     if (el.onclick === 'klik' && el.className === 'pricing') {
@@ -163,11 +182,37 @@ function catchEventListeners(el) {
             document.getElementsByClassName('hero-text1')[0].style.display = 'none';
             document.getElementsByClassName('hero-text2')[0].style.display = 'none';
             document.getElementsByClassName('hero-text3')[0].style.display = 'none';
-            document.getElementsByClassName('hero-text4')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
             document.getElementsByClassName('home')[0].style = 'border-bottom: none';
             document.getElementsByClassName('products')[0].style = 'border-bottom: none';
             document.getElementsByClassName('templates')[0].style = 'border-bottom: none';
             document.getElementsByClassName('pricing')[0].style = 'border-bottom: 2px solid white';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'none';
+        })
+    }
+    if (el.onclick === 'klik' && el.className === 'logo-container') {
+        document.getElementsByClassName('logo-container')[0].addEventListener('click', function() {
+            document.getElementsByClassName('hero-text1')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text2')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text3')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
+            document.getElementsByClassName('home')[0].style = 'border-bottom: 2px solid white';
+            document.getElementsByClassName('products')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('templates')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('pricing')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'block';
+            document.getElementById('dot1').style = 'border: 4px solid rgb(255, 184, 0)';
+            document.getElementById('dot2').style = 'border: 4px solid transparent';
+            document.getElementById('dot3').style = 'border: 4px solid transparent';
+            document.getElementById('dot4').style = 'border: 4px solid transparent';
         })
     }
     if (el.onclick === 'klik' && el.id === 'homeId') {
@@ -176,22 +221,41 @@ function catchEventListeners(el) {
             document.getElementsByClassName('hero-text2')[0].style.display = 'none';
             document.getElementsByClassName('hero-text3')[0].style.display = 'none';
             document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'block';
+            document.getElementById('dot1').style = 'border: 4px solid rgb(255, 184, 0)';
+            document.getElementById('dot2').style = 'border: 4px solid transparent';
+            document.getElementById('dot3').style = 'border: 4px solid transparent';
+            document.getElementById('dot4').style = 'border: 4px solid transparent';
         })
     }
     if (el.onclick === 'klik' && el.id === 'productsId') {
         document.getElementById('productsId').addEventListener('click', function() {
             document.getElementsByClassName('hero-text1')[0].style.display = 'none';
-            document.getElementsByClassName('hero-text2')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text2')[0].style.display = 'none';
             document.getElementsByClassName('hero-text3')[0].style.display = 'none';
             document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'none';
         })
     }
     if (el.onclick === 'klik' && el.id === 'templatesId') {
         document.getElementById('templatesId').addEventListener('click', function() {
             document.getElementsByClassName('hero-text1')[0].style.display = 'none';
             document.getElementsByClassName('hero-text2')[0].style.display = 'none';
-            document.getElementsByClassName('hero-text3')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text3')[0].style.display = 'none';
             document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'none';
         })
     }
     if (el.onclick === 'klik' && el.id === 'pricingId') {
@@ -199,7 +263,29 @@ function catchEventListeners(el) {
             document.getElementsByClassName('hero-text1')[0].style.display = 'none';
             document.getElementsByClassName('hero-text2')[0].style.display = 'none';
             document.getElementsByClassName('hero-text3')[0].style.display = 'none';
-            document.getElementsByClassName('hero-text4')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'block';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'none';
+        })
+    }
+    if (el.onclick === 'klik' && el.className === 'cta-button') {
+        document.getElementsByClassName('cta-button')[0].addEventListener('click', function() {
+            document.getElementsByClassName('hero-text1')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text2')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text3')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text4')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text5')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text6')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text7')[0].style.display = 'none';
+            document.getElementsByClassName('hero-text8')[0].style.display = 'block';
+            document.getElementsByClassName('home')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('products')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('templates')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('pricing')[0].style = 'border-bottom: none';
+            document.getElementsByClassName('dotwrap')[0].style.display = 'none';
         })
     }
 }
