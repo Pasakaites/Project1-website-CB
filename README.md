@@ -1,5 +1,1 @@
-Puikus indoeuropietiško programavimo pavyzdys, apjungiantis geriausias indiško ir lietuviško programavimo tradicijas. 
-
-
-
-
+First personal assignment of bootcamp – website loading from json.  
